@@ -21,3 +21,16 @@ C:\Users\moham\Desktop\Pfetest-master\PFE\obj\Debug\PFE.Utilisateur.resources
 C:\Users\moham\Desktop\Pfetest-master\PFE\obj\Debug\PFE.csproj.GenerateResource.Cache
 C:\Users\moham\Desktop\Pfetest-master\PFE\bin\Debug\Bunifu_UI_v1.5.3.dll
 C:\Users\moham\Desktop\Pfetest-master\PFE\obj\Debug\PFE.Login.resources
+C:\Users\moham\Desktop\PFF\PFE\bin\Debug\PFE.exe.config
+C:\Users\moham\Desktop\PFF\PFE\obj\Debug\PFE.exe
+C:\Users\moham\Desktop\PFF\PFE\obj\Debug\PFE.pdb
+C:\Users\moham\Desktop\PFF\PFE\bin\Debug\PFE.exe
+C:\Users\moham\Desktop\PFF\PFE\bin\Debug\PFE.pdb
+C:\Users\moham\Desktop\PFF\PFE\bin\Debug\Bunifu_UI_v1.5.3.dll
+C:\Users\moham\Desktop\PFF\PFE\obj\Debug\PFE.csprojResolveAssemblyReference.cache
+C:\Users\moham\Desktop\PFF\PFE\obj\Debug\PFE.Bio_Market.resources
+C:\Users\moham\Desktop\PFF\PFE\obj\Debug\PFE.Login.resources
+C:\Users\moham\Desktop\PFF\PFE\obj\Debug\PFE.Properties.Resources.resources
+C:\Users\moham\Desktop\PFF\PFE\obj\Debug\PFE.Utilisateur.resources
+C:\Users\moham\Desktop\PFF\PFE\obj\Debug\PFE.csproj.GenerateResource.Cache
+C:\Users\moham\Desktop\PFF\PFE\obj\Debug\PFE.Produit.resources

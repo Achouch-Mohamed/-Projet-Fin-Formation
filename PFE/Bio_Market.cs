@@ -12,10 +12,33 @@ namespace PFE
 {
     public partial class Bio_Market : Form
     {
-       
-
-        public Bio_Market()
+        private static Bio_Market BM;
+     
+        static void Form_Closed(object sender ,FormClosedEventArgs e)
         {
+            BM = null;
+        }
+
+        public static Bio_Market getBio_Market
+        {
+            get
+            {
+                if (BM==null)
+                {
+                    BM = new Bio_Market();
+                    BM.FormClosed += new FormClosedEventHandler(Form_Closed);
+                }
+                return BM;
+            }
+        }
+
+        public Bio_Market ()
+        {
+            if (BM == null)
+            {
+                BM = this;
+            }
+
             InitializeComponent();
         }
 
@@ -50,6 +73,32 @@ namespace PFE
         {
 
         }
+
+        private void produitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Produit P = new Produit();
+            P.Show();
+            P.MdiParent = this;
+            return;
+        }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Vollez Vous Vraiment Deconnecter C'est Compte", "Deconnecter", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+            {
+                Bio_Market.getBio_Market.Utilisateur.Enabled = false;
+                Bio_Market.getBio_Market.utili_management.Enabled = false;
+                Bio_Market.getBio_Market.Produit.Enabled = false;
+                Bio_Market.getBio_Market.produitManagement.Enabled = false;
+                Connecter.Enabled = true;
+                Deconnecter.Enabled = false;
+            }
+        
+         
+
+        }
+
+        
 
    
     }

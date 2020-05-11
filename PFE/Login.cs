@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -34,31 +35,40 @@ namespace PFE
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int sw = 0, s;
+           
 
-            if (Email.Text == "" || Code.Text == "" )
+            if (Cin.Text == "" || Code.Text == "" )
             {
                 MessageBox.Show("SVP Remplair Tout Les Chemps");
                 return;
             }
-
-         
-            for (s = 0; s <= u.List_Utilisateur.RowCount - 2; s++)
+            c.Connecter();
+            SqlCommand cmd = new SqlCommand("Utilisateur_Login", c.Con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@Cin", Cin.Text.Trim());
+            cmd.Parameters.AddWithValue("@Code", Code.Text.Trim());
+            c.Datadaber.SelectCommand = cmd;
+            c.Datadaber.Fill(c.dt);
+            cmd.Dispose();
+            if (c.dt.Rows.Count > 0)
             {
-                if (Email.Text == u.List_Utilisateur.Rows[s].Cells[8].Value.ToString() && Code.Text == u.List_Utilisateur.Rows[s].Cells[6].Value.ToString())
-                {
-                    sw = 1;
-                }
-               
+                Bio_Market.getBio_Market.Utilisateur.Enabled = true;
+                Bio_Market.getBio_Market.utili_management.Enabled = true;
+                Bio_Market.getBio_Market.Produit.Enabled=true;
+                Bio_Market.getBio_Market.produitManagement.Enabled = true;
+                Bio_Market.getBio_Market.Connecter.Enabled = false;
+                Bio_Market.getBio_Market.Deconnecter.Enabled = true;
+                this.Hide();
+                return;
             }
-            if (sw== 1)
+            else
             {
-                MessageBox.Show("OUI");
-            }
-            if (sw == 0)
-            {
-                MessageBox.Show("Non");
-            }
+                MessageBox.Show("Login Failed");
+                Oublie_Mot_De_Passe.Visible = true;
+                return;
+            }  
+           
+           
         }
     }
 }

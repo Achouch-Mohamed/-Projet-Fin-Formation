@@ -29,7 +29,16 @@ namespace PFE
             C.Dtset = new DataSet();
             C.Datadaber.Fill(C.Dtset, "Utilisateur");
             List_Utilisateur.DataSource = C.Dtset.Tables["Utilisateur"];
-           
+           ///////////    Design DatagridView       ////////////////////
+            List_Utilisateur.BorderStyle = BorderStyle.None;
+            List_Utilisateur.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            List_Utilisateur.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            List_Utilisateur.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            List_Utilisateur.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            List_Utilisateur.EnableHeadersVisualStyles = false;
+            List_Utilisateur.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            List_Utilisateur.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            List_Utilisateur.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
         private void button1_Click(object sender, EventArgs e)
         {

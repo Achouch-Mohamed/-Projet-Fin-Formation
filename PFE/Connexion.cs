@@ -14,7 +14,8 @@ namespace PFE
         public DataSet Dtset = new DataSet();
         public DataRow NewLigne;
         public SqlCommandBuilder CmdBuild;
-
+        public DataTable dt = new DataTable();
+        public SqlCommand cmd = new SqlCommand();
 
 
         public void Connecter()
@@ -32,6 +33,8 @@ namespace PFE
                 Con.Close();
             }
         }
+
+       
     }
  
 }

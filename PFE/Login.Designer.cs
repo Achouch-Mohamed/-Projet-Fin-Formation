@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            this.Email = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.Cin = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.Code = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.Oublie_Mot_De_Passe = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -38,25 +38,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // Email
+            // Cin
             // 
-            this.Email.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Email.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.Email.ForeColor = System.Drawing.Color.Black;
-            this.Email.HintForeColor = System.Drawing.Color.Empty;
-            this.Email.HintText = "";
-            this.Email.isPassword = false;
-            this.Email.LineFocusedColor = System.Drawing.Color.Blue;
-            this.Email.LineIdleColor = System.Drawing.Color.Gray;
-            this.Email.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.Email.LineThickness = 3;
-            this.Email.Location = new System.Drawing.Point(18, 125);
-            this.Email.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.Email.Name = "Email";
-            this.Email.Size = new System.Drawing.Size(199, 38);
-            this.Email.TabIndex = 0;
-            this.Email.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Cin.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Cin.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Cin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.Cin.ForeColor = System.Drawing.Color.Black;
+            this.Cin.HintForeColor = System.Drawing.Color.Empty;
+            this.Cin.HintText = "";
+            this.Cin.isPassword = false;
+            this.Cin.LineFocusedColor = System.Drawing.Color.Blue;
+            this.Cin.LineIdleColor = System.Drawing.Color.Gray;
+            this.Cin.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.Cin.LineThickness = 3;
+            this.Cin.Location = new System.Drawing.Point(18, 125);
+            this.Cin.Margin = new System.Windows.Forms.Padding(5);
+            this.Cin.Name = "Cin";
+            this.Cin.Size = new System.Drawing.Size(199, 38);
+            this.Cin.TabIndex = 0;
+            this.Cin.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // Code
             // 
@@ -72,7 +72,7 @@
             this.Code.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.Code.LineThickness = 3;
             this.Code.Location = new System.Drawing.Point(18, 189);
-            this.Code.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Code.Margin = new System.Windows.Forms.Padding(5);
             this.Code.Name = "Code";
             this.Code.Size = new System.Drawing.Size(199, 38);
             this.Code.TabIndex = 1;
@@ -88,6 +88,7 @@
             this.Oublie_Mot_De_Passe.TabIndex = 2;
             this.Oublie_Mot_De_Passe.TabStop = true;
             this.Oublie_Mot_De_Passe.Text = "Oublie Mot De Passe";
+            this.Oublie_Mot_De_Passe.Visible = false;
             // 
             // pictureBox1
             // 
@@ -133,7 +134,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Oublie_Mot_De_Passe);
             this.Controls.Add(this.Code);
-            this.Controls.Add(this.Email);
+            this.Controls.Add(this.Cin);
             this.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
@@ -148,7 +149,7 @@
 
         #endregion
 
-        private Bunifu.Framework.UI.BunifuMaterialTextbox Email;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox Cin;
         private Bunifu.Framework.UI.BunifuMaterialTextbox Code;
         private System.Windows.Forms.LinkLabel Oublie_Mot_De_Passe;
         private System.Windows.Forms.PictureBox pictureBox1;
